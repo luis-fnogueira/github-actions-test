@@ -1,6 +1,6 @@
 name: Actions Workflows
 
-on: [push]
+on: [push, pull_request]
 
 jobs: 
   run-github-actions:
@@ -10,6 +10,7 @@ jobs:
         run: |
           pwd
           ls -a
+          echo "Hello World"
       - name: Checkout
         uses: actions/checkout@v1
       - name: List files after checkout
