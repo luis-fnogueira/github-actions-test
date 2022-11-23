@@ -3,7 +3,8 @@ name: shell commands
 on: [push]
 
 jobs:
-  run-shell-command: 
+  run-shell-command:
+    enviroment: test 
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -12,4 +13,3 @@ jobs:
         run: |
           node -v 
           npm -v
-          
